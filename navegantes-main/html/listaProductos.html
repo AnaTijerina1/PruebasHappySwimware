@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+	<link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Caramel&family=Fleur+De+Leah&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel='stylesheet' href='/css/estilos.css'>
+	<link rel="stylesheet" href="/css/ofertas.css">
+	<title>Lista de productos</title>
+</head>
+<body>
+	<header class="sticky-top">
+<div class="header">
+		<div class="menu-bar">
+			<nav class="navbar navbar-expand-lg navbar-light " style="padding-top: 0px; padding-bottom: 0px;">
+				<div class="container-fluid">
+				  <!-- <a class="navbar-brand" href="#">Happy swimwear</a> -->
+                  <a class="navbar-brand" href="#" style="padding-top: 0px; padding-bottom: 0px;"><img src="/imagenes/logoA.png" style="margin-top: 0px; padding-top: 5px;" alt=""></a>
+				  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="PaginaPrincipal.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Productos</a>
+            </li>
+					
+            <li class="nav-item">
+              <a class="nav-link" href="Aboutus.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Iniciar Sesión</a>
+            </li>
+					</ul>
+				  </div>
+				</div>
+			  </nav>
+		</div>
+ </div>
+ </header>
+<!-- FIN BARRA NAVEGACION -->
+	
+	<br><br>
+
+	<div class="row d-flex d-lg-none o-container-shadow ps-2">
+		<div class="col-md-4 col-5">
+			<select class="form-select" aria-label="Default select example">
+
+			<option selected href="#" onclick="CargarItems()">Todas las categorias</option>
+
+			<option href="#Dama_una_pieza" onclick="CargarItemsByCategory('Dama una pieza')">Dama una pieza</option>
+			
+			<option href="#Dama_dos_piezas" onclick="CargarItemsByCategory('Dama dos piezas')">Dama dos piezas</option>
+
+			<option href="#Dama_trikini" onclick="CargarItemsByCategory('Dama trikini')">Dama trikini</option>
+
+			<option href="#Dama_curvy" onclick="CargarItemsByCategory('Dama curvy')">Dama curvy</option>
+
+			<option href="#Caballero" onclick="CargarItemsByCategory('Caballero')">Caballero</option>
+
+			<option href="#Caballero_curvy" onclick="CargarItemsByCategory('Caballero curvy')">Caballero curvy</option>
+
+
+
+
+			</select>
+		</div>
+		<div class="col-md-8"></div>
+	</div>	
+	<div class="row">
+
+		<aside class="col-lg-2">
+			<div class="d-none d-lg-block">
+				<nav class="nav flex-column category">
+					<label class="negroLabel category" for="Categorias">Categorias</label>
+
+					<a id="#Todas_categorias" class="nav-link navNegro" href="#" onclick="CargarItems()">Todas las categorias</a>
+
+					<a id="#Dama_una_pieza" class="nav-link navNegro" href="#Dama_una_pieza" onclick="CargarItemsByCategory('Dama una pieza')">Dama una pieza</a>
+
+					<a id="#Dama_dos_piezas" class="nav-link navNegro" href="#Dama_dos_piezas" onclick="CargarItemsByCategory('Dama dos piezas')">Dama dos piezas</a>
+
+					<a id="#Dama_trikini" class="nav-link navNegro" href="#Dama_trikini" onclick="CargarItemsByCategory('Dama trikini')">Dama trikini</a>
+
+
+					<a id="#Dama_curvy" class="nav-link navNegro" href="#Dama_curvy" onclick="CargarItemsByCategory('Dama curvy')">Dama curvy</a>
+
+					<a id="#Caballero" class="nav-link navNegro" href="#Caballero" onclick="CargarItemsByCategory('Caballero')">Caballero </a>
+
+					<a id="#Caballero_curvy" class="nav-link navNegro" href="#Caballero_curvy" onclick="CargarItemsByCategory('Caballero curvy')">Caballero curvy</a>
+				</nav>
+			</div>
+		</aside>
+
+		<main class="col-lg-10">
+			<div class="row">
+				<div class="col-12">
+					<div class="row g-4" id="listaBikinis">
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+				
+
+
+
+
+				
+			
+				
+
+
+	<!-- ----------------------------FIN DE LOS BIKINIS -->
+
+		</div>
+
+
+
+	<br/>
+
+
+	<nav aria-label="...">
+		<ul class="pagination justify-content-center">
+			<li class="page-item disabled">
+				<span class="page-link">Previous</span>
+			</li>
+			<li class="page-item active"><a class="page-link" href="#">1</a></li>
+			<li class="page-item" aria-current="page">
+				<span class="page-link">2</span>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#">Next</a>
+			</li>
+		</ul>
+	</nav>
+	
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="/js/agregarItems.js"></script>
+	<script src="/js/cargarItems.js"></script>
+
+</body>
+</html>
